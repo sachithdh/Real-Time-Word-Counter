@@ -24,6 +24,12 @@ class WordCounter:
         self.showCount = ctk.CTkLabel(self.root, text="0 word")
         self.showCount.pack()
 
+        # appearance
+        self.appearance_mode_label = ctk.CTkLabel(self.root, text="Appearance Mode:", anchor="w")
+        self.appearance_mode_label.pack(padx=20, pady=(10, 0))
+        self.appearance_mode_optionemenu = ctk.CTkOptionMenu(self.root, values=["Light", "Dark", "System"],command=self.change_appearance_mode_event)
+        self.appearance_mode_optionemenu.pack(padx=20, pady=(10, 10))
+
         self.root.mainloop()
 
     def count(self, event):
