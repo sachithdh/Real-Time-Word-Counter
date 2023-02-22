@@ -50,5 +50,13 @@ class WordCounter:
                 count -=1
         
         self.showCount.configure(text = str(count) + " Words")
+ 
+    def change_appearance_mode_event(self, new_appearance_mode: str):
+        ctk.set_appearance_mode(new_appearance_mode)
+        
+        if new_appearance_mode == "Dark":
+            self.text.configure(bg="gray22", fg="white")
+        elif new_appearance_mode == "Light":
+            self.text.configure(bg="white", fg="black")
 
 WordCounter()
