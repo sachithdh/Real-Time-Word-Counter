@@ -12,7 +12,7 @@ class WordCounter:
         
         # framework
         self.root = ctk.CTk()
-        self.root.geometry("720x600")
+        self.root.geometry("720x650")
         self.root.title("Word Counter")
 
         # text input field
