@@ -1,6 +1,7 @@
 import customtkinter as ctk
 import tkinter as tk
 from tkinter.scrolledtext import ScrolledText
+from tkinter import filedialog
 
 class WordCounter:
 
@@ -23,16 +24,16 @@ class WordCounter:
         # show word count
         self.showCount = ctk.CTkLabel(self.root, text="0 word")
         self.showCount.pack()
+        
+        #save button
+        self.savebtn = ctk.CTkButton(self.root, text="Save", width=10, command=self.savetxt)
+        self.savebtn.pack(padx=10, pady=30)
 
         # appearance
         self.appearance_mode_label = ctk.CTkLabel(self.root, text="Appearance Mode:", anchor="w")
         self.appearance_mode_label.pack(padx=20, pady=(10, 0))
         self.appearance_mode_optionemenu = ctk.CTkOptionMenu(self.root, values=["Light", "Dark", "System"],command=self.change_appearance_mode_event)
         self.appearance_mode_optionemenu.pack(padx=20, pady=(10, 10))
-        
-        #save button
-        self.savebtn = ctk.CTkButton(self.root, text="Save", width=10, command=self.savetxt)
-        self.savebtn.pack(padx=10, pady=30)
 
         self.root.mainloop()
 
