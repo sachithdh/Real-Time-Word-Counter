@@ -29,6 +29,10 @@ class WordCounter:
         self.appearance_mode_label.pack(padx=20, pady=(10, 0))
         self.appearance_mode_optionemenu = ctk.CTkOptionMenu(self.root, values=["Light", "Dark", "System"],command=self.change_appearance_mode_event)
         self.appearance_mode_optionemenu.pack(padx=20, pady=(10, 10))
+        
+        #save button
+        self.savebtn = ctk.CTkButton(self.root, text="Save", width=10, command=self.savetxt)
+        self.savebtn.pack(padx=10, pady=30)
 
         self.root.mainloop()
 
@@ -58,5 +62,12 @@ class WordCounter:
             self.text.configure(bg="gray22", fg="white")
         elif new_appearance_mode == "Light":
             self.text.configure(bg="white", fg="black")
+            
+    # save text in the text field
+    def savetxt(self):
+        savePath = filedialog.asksaveasfilename(defaultextension=".txt")
+        if savePath:
+            with open(savePath,"w") as f:
+                f.write(self.text.get("1.0", tk.END))
 
 WordCounter()
