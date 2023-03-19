@@ -8,6 +8,7 @@
 # clone the repo
 $ git clone https://github.com/sachith-d/Real-Time-Word-Counter.git
 
+# navigate to the directory
 $ cd Real-Time-Word-Counter
 
 # install the requirements
