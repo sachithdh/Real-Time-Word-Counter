@@ -20,3 +20,6 @@ $ python3 -m pip install -r requirements.txt
 $ python main.py
 ```
 Copy and paste or type your text to count its words and characters
+
+
+More features will be added soon!
