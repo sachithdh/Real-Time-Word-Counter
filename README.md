@@ -25,7 +25,7 @@ Copy and paste or type your text to count its words and characters
 
 ### Screenshot
 
-[(/Images/Capture.PNG)
+<img src="/Images/Capture_1.PNG" width="550px">
 
 
 ***More features will be added soon!***
