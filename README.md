@@ -22,4 +22,10 @@ $ python main.py
 Copy and paste or type your text to count its words and characters
 
 
+
+### Screenshot
+
+[(/Images/Capture.PNG)
+
+
 ***More features will be added soon!***
